@@ -3,8 +3,16 @@ server:
 
 spring:
   application:
-    name: activityservice
+    name: activity-service
   data:
     mongodb:
       uri: mongodb+srv://gamikakj:NrlXtiLJZ4VeZzQU@cluster0.w2d9zk6.mongodb.net/fitnessactivity_db?retryWrites=true&w=majority
       database: fitnessactivity_db
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
